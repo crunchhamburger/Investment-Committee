@@ -1,0 +1,13 @@
+{
+ "challenges": [
+  {
+   "target_role": "growth",
+   "driver": "price_decay_per_year_of_age",
+   "question": "The September survey shows prior-generation prices falling 15-20% per year of age and H100-class pricing down ~30% y/y. What evidence supports your 11%?",
+   "counter_value": 0.175,
+   "evidence_ids": [
+    "EV-005"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "responses": [
+  {
+   "challenge_id": "industry->growth:price_decay_per_year_of_age",
+   "concedes": true,
+   "response": "I had not seen the pricing survey. Contracted pricing softens the effect but 11% is too low; I will move toward the survey range.",
+   "evidence_ids": [
+    "EV-005"
+   ]
+  },
+  {
+   "challenge_id": "contrarian->growth:utilization",
+   "concedes": false,
+   "response": "Concentration is real, but the self-build is a 2028 event and current contracts run multiple years. I keep 88% for the base case and lower the bear case.",
+   "evidence_ids": [
+    "EV-003"
+   ]
+  },
+  {
+   "challenge_id": "credit->growth:wacc",
+   "concedes": false,
+   "response": "The 9.25% coupon is a debt cost; with ~50% debt weighting 10.5% is defensible.",
+   "evidence_ids": [
+    "EV-008"
+   ]
+  }
+ ]
+}

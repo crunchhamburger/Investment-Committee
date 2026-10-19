@@ -1,0 +1,31 @@
+{
+ "challenges": [
+  {
+   "target_role": "industry",
+   "driver": "price_decay_per_year_of_age",
+   "question": "Most of the fleet is on multi-year contracts at about $3.00. Does a spot-market survey describe contracted revenue at all?",
+   "evidence_ids": [
+    "EV-003"
+   ]
+  },
+  {
+   "target_role": "contrarian",
+   "driver": "utilization",
+   "question": "Management reports fleet utilization above 90%. What evidence supports 80%?",
+   "counter_value": 0.9,
+   "evidence_ids": [
+    "EV-003"
+   ]
+  },
+  {
+   "target_role": "credit",
+   "driver": "wacc",
+   "question": "Isn't 11.5% too punitive for a business with $55bn of contracted backlog?"
+  },
+  {
+   "target_role": "value",
+   "driver": "utilization",
+   "question": "Unassigned challenge - should be dropped."
+  }
+ ]
+}

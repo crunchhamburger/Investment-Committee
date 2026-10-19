@@ -1,0 +1,12 @@
+{
+ "responses": [
+  {
+   "challenge_id": "growth->industry:price_decay_per_year_of_age",
+   "concedes": false,
+   "response": "Contract terms are not disclosed in the dossier, so the share of the fleet protected from spot pricing is unknown. Survey-based decay remains the best available evidence.",
+   "evidence_ids": [
+    "EV-005"
+   ]
+  }
+ ]
+}

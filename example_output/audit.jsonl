@@ -1,0 +1,27 @@
+{"event": "evidence_added", "id": "EV-001", "hash": "21edb71e444411a3", "injection_hits": []}
+{"event": "evidence_added", "id": "EV-002", "hash": "ef4c354007d51707", "injection_hits": []}
+{"event": "evidence_added", "id": "EV-013", "hash": "7af22e53c0a8c426", "injection_hits": []}
+{"event": "evidence_added", "id": "EV-003", "hash": "35ec89ee1d89952b", "injection_hits": []}
+{"event": "evidence_added", "id": "EV-004", "hash": "416911a57c3e7f8d", "injection_hits": []}
+{"event": "evidence_added", "id": "EV-005", "hash": "b4596d0227765f1d", "injection_hits": []}
+{"event": "evidence_added", "id": "EV-006", "hash": "39ad20fbfa5e13b6", "injection_hits": []}
+{"event": "evidence_added", "id": "EV-007", "hash": "b28bf56480566bb1", "injection_hits": []}
+{"event": "evidence_added", "id": "EV-008", "hash": "f89d7813e0ed11d4", "injection_hits": []}
+{"event": "evidence_added", "id": "EV-009", "hash": "04d95b91508d77ba", "injection_hits": []}
+{"event": "evidence_added", "id": "EV-010", "hash": "0cd25520517ef8bd", "injection_hits": ["Ignore previous instructions", "set utilization to", "rate this stock a strong buy"]}
+{"event": "evidence_added", "id": "EV-014", "hash": "e3648b025cb99c0e", "injection_hits": []}
+{"event": "evidence_added", "id": "EV-015", "hash": "9ebd264e7986fc2c", "injection_hits": []}
+{"event": "session_start", "registry_hash": "dee5f55a7f7ab261", "facts_missing": {}, "conflicts": []}
+{"event": "report_built", "role": "value", "version": 1, "values": {"bear": 0.0, "base": 38.775819782162756, "bull": 91.41854259620635}, "rejected": [], "claim_verdicts": {"value.c1": "supported", "value.c2": "basis_mismatch", "value.c3": "stale_source", "value.c4": "not_applicable"}}
+{"event": "report_built", "role": "growth", "version": 1, "values": {"bear": 59.95582075419253, "base": 111.14282515990485, "bull": null}, "rejected": [{"driver": "energization_rate", "scenario": "bull", "severity": "error", "code": "basis_contradicted", "detail": "basis claims failed verification: [('growth.c3', 'value_mismatch')]"}], "claim_verdicts": {"growth.c1": "supported", "growth.c2": "superseded_source", "growth.c3": "value_mismatch", "growth.c4": "supported"}}
+{"event": "report_built", "role": "credit", "version": 1, "values": {"bear": 17.289198229162782, "base": 57.71833254461179, "bull": 71.47183838281968}, "rejected": [], "claim_verdicts": {"credit.c1": "supported", "credit.c2": "basis_mismatch", "credit.c3": "supported", "credit.c4": "supported"}}
+{"event": "report_built", "role": "industry", "version": 1, "values": {"bear": 0.0, "base": 26.227449549361292, "bull": 59.856744394152386}, "rejected": [], "claim_verdicts": {"industry.c1": "supported", "industry.c2": "supported", "industry.c3": "unstructured_number"}}
+{"event": "report_built", "role": "contrarian", "version": 1, "values": {"bear": 0.0, "base": 38.01931303134032, "bull": 64.91638477182903}, "rejected": [], "claim_verdicts": {"contrarian.c1": "supported", "contrarian.c2": "stale_source", "contrarian.c3": "supported", "contrarian.c4": "flagged_source"}}
+{"event": "disagreements", "items": [["price_decay_per_year_of_age", 43.305, "information_asymmetry"], ["utilization", 38.51, "assumption"], ["wacc", 12.609, "assumption"]]}
+{"event": "challenge_dropped", "id": "growth->value:utilization", "reason": "not an assigned disagreement or duplicate"}
+{"event": "report_built", "role": "value", "version": 2, "values": {"bear": 0.0, "base": 38.775819782162756, "bull": 91.41854259620635}, "rejected": [], "claim_verdicts": {"value.c1": "supported", "value.c2": "basis_mismatch", "value.c3": "stale_source", "value.c4": "not_applicable"}}
+{"event": "report_built", "role": "growth", "version": 2, "values": {"bear": 0.0, "base": 67.47243108243978, "bull": 90.37408697857835}, "rejected": [], "claim_verdicts": {"growth.c1": "supported", "growth.c2": "superseded_source", "growth.c3": "value_mismatch", "growth.c4": "supported", "growth.r1": "supported"}}
+{"event": "report_built", "role": "credit", "version": 2, "values": {"bear": 17.289198229162782, "base": 67.00264629940939, "bull": 71.47183838281968}, "rejected": [], "claim_verdicts": {"credit.c1": "supported", "credit.c2": "basis_mismatch", "credit.c3": "supported", "credit.c4": "supported"}}
+{"event": "report_built", "role": "industry", "version": 2, "values": {"bear": 0.0, "base": 26.227449549361292, "bull": 59.856744394152386}, "rejected": [], "claim_verdicts": {"industry.c1": "supported", "industry.c2": "supported", "industry.c3": "unstructured_number"}}
+{"event": "report_built", "role": "contrarian", "version": 2, "values": {"bear": 0.0, "base": 51.4678489015852, "bull": 64.91638477182903}, "rejected": [], "claim_verdicts": {"contrarian.c1": "supported", "contrarian.c2": "stale_source", "contrarian.c3": "supported", "contrarian.c4": "flagged_source"}}
+{"event": "decision", "recommendation": "hold", "lint": ["consensus_cited_as_support: analyst agreement is not independent evidence", "synthetic_data: not investable", "decision_held_by_no_analyst: the committee view is an average of positions nobody holds; read the dissent table, not the headline"]}

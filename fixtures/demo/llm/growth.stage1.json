@@ -1,0 +1,279 @@
+{
+ "thesis": "Contracted power of 2.5 GW against 0.9 GW energised is a multi-year revenue runway; at management's $3.00 contracted pricing the build-out compounds equity value.",
+ "stance": "positive",
+ "key_points": [
+  "1.6 GW of contracted-but-dark capacity.",
+  "Management targets 400-600 MW of additions per year.",
+  "Newest-generation capacity contracted around $3.00 per GPU-hour."
+ ],
+ "claims": [
+  {
+   "id": "c1",
+   "text": "Management targets 400-600 MW of new contracted power per year.",
+   "epistemic": "management_guidance",
+   "citations": [
+    "EV-003"
+   ],
+   "metric": "mw_additions_per_year",
+   "value": 500,
+   "unit": "MW",
+   "period": "2027-2030"
+  },
+  {
+   "id": "c2",
+   "text": "Active power reached 950 MW at quarter end.",
+   "epistemic": "verified_fact",
+   "citations": [
+    "EV-002"
+   ],
+   "metric": "active_power_mw",
+   "value": 950,
+   "unit": "MW",
+   "period": "2026-06-30"
+  },
+  {
+   "id": "c3",
+   "text": "Remaining performance obligations were $75bn.",
+   "epistemic": "verified_fact",
+   "citations": [
+    "EV-001"
+   ],
+   "metric": "remaining_performance_obligations",
+   "value": 75.0,
+   "unit": "USD_bn",
+   "period": "2026-06-30"
+  },
+  {
+   "id": "c4",
+   "text": "New-generation clusters are contracted at about $3.00 per GPU-hour.",
+   "epistemic": "management_guidance",
+   "citations": [
+    "EV-003"
+   ],
+   "metric": "contracted_price_per_gpu_hour_new",
+   "value": 3.0,
+   "unit": "USD_per_hour",
+   "period": "2026-09"
+  }
+ ],
+ "scenarios": [
+  {
+   "name": "base",
+   "probability": 0.5,
+   "assumptions": [
+    {
+     "driver": "mw_additions_per_year",
+     "value": 550,
+     "epistemic": "management_guidance",
+     "basis_claims": [
+      "c1"
+     ],
+     "rationale": "Upper half of management's range given demand."
+    },
+    {
+     "driver": "energization_rate",
+     "value": 0.4,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Power is contracted; energisation is an execution question."
+    },
+    {
+     "driver": "pue",
+     "value": 1.3,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Modern liquid-cooled halls; 1.3 is a typical design PUE."
+    },
+    {
+     "driver": "kw_per_gpu",
+     "value": 1.4,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "All-in IT load per GPU for current-generation racks including networking."
+    },
+    {
+     "driver": "existing_fleet_avg_age",
+     "value": 1,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Fleet was largely deployed over the last two years."
+    },
+    {
+     "driver": "utilization",
+     "value": 0.88,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Share of GPU-hours sold across the fleet."
+    },
+    {
+     "driver": "price_per_gpu_hour_new",
+     "value": 3.0,
+     "epistemic": "management_guidance",
+     "basis_claims": [
+      "c4"
+     ],
+     "rationale": "Management's contracted price."
+    },
+    {
+     "driver": "price_new_growth_per_year",
+     "value": 0.0,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Newest-generation pricing assumed flat in nominal terms."
+    },
+    {
+     "driver": "price_decay_per_year_of_age",
+     "value": 0.11,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Discount per year of hardware age as new generations arrive."
+    },
+    {
+     "driver": "power_cost_per_mwh",
+     "value": 65,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Blended industrial power contracts in the company's regions."
+    },
+    {
+     "driver": "lease_cost_per_mw_year",
+     "value": 1200000.0,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Colocation lease cost per energised MW."
+    },
+    {
+     "driver": "other_opex_pct_revenue",
+     "value": 0.12,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Staffing, network, SG&A as share of revenue."
+    },
+    {
+     "driver": "capex_per_gpu",
+     "value": 40000,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "All-in server, networking and installation cost per GPU."
+    },
+    {
+     "driver": "gpu_useful_life_years",
+     "value": 6,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Company's stated accounting life."
+    },
+    {
+     "driver": "gpu_economic_life_years",
+     "value": 6,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Expected service life before replacement."
+    },
+    {
+     "driver": "existing_ppe_remaining_life",
+     "value": 5,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Remaining depreciation life of the installed base."
+    },
+    {
+     "driver": "tax_rate",
+     "value": 0.21,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Statutory rate; NOLs ignored for simplicity."
+    },
+    {
+     "driver": "nwc_pct_revenue_change",
+     "value": 0.05,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Customer prepayments partly offset receivables."
+    },
+    {
+     "driver": "wacc",
+     "value": 0.105,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "High-beta, highly levered equity; cost of capital set conservatively."
+    },
+    {
+     "driver": "terminal_growth",
+     "value": 0.03,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Long-run nominal growth after the build-out phase."
+    },
+    {
+     "driver": "debt_funded_share_of_capex",
+     "value": 0.7,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Historical financing mix of asset-backed and unsecured debt."
+    },
+    {
+     "driver": "new_debt_rate",
+     "value": 0.085,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Recent issuance levels for comparable high-yield infrastructure credits."
+    }
+   ]
+  },
+  {
+   "name": "bear",
+   "probability": 0.2,
+   "assumptions": [
+    {
+     "driver": "utilization",
+     "value": 0.8,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Temporary digestion period."
+    },
+    {
+     "driver": "energization_rate",
+     "value": 0.3,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Grid equipment delays."
+    }
+   ]
+  },
+  {
+   "name": "bull",
+   "probability": 0.3,
+   "assumptions": [
+    {
+     "driver": "energization_rate",
+     "value": 0.55,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [
+      "c3"
+     ],
+     "rationale": "A $75bn backlog forces rapid energisation."
+    },
+    {
+     "driver": "utilization",
+     "value": 0.92,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Management's current utilization holds."
+    }
+   ]
+  }
+ ],
+ "uncertainties": [
+  "Customer concentration not addressed in this report."
+ ],
+ "invalidation_triggers": [
+  {
+   "description": "New contracted MW falls below 300 MW in a year",
+   "metric": "mw_additions_per_year",
+   "operator": "<",
+   "threshold": 300,
+   "unit": "MW"
+  }
+ ]
+}

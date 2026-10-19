@@ -1,0 +1,13 @@
+# Binding risk policy. Only rules listed in veto_rules can block a BUY.
+# Every threshold here is a policy choice, not a fact; change them deliberately and record why.
+max_net_debt_to_ebitda: 6.0
+min_interest_coverage: 1.5
+max_bear_drawdown: 0.60
+max_prob_impairment: 0.35
+impairment_threshold: 0.30      # "impairment" = value below 70% of the entry price
+max_model_dispersion: 1.50      # (p90 - p10) / median of analysts' base values; above this the committee abstains
+max_terminal_share: 0.85
+max_position: 0.05              # of NAV
+loss_budget: 0.01               # max NAV loss in the median bear case
+hurdle_return: 0.15
+veto_rules: [min_interest_coverage, max_prob_impairment]

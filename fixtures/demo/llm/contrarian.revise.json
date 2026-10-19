@@ -1,0 +1,16 @@
+{
+ "changes": [
+  {
+   "scenario": "base",
+   "driver": "utilization",
+   "new_value": 0.83,
+   "reason": "Management's unaudited >90% claim is weak evidence but not zero; moving partway.",
+   "basis_challenge_ids": [
+    "growth->contrarian:utilization"
+   ],
+   "basis_evidence_ids": [
+    "EV-003"
+   ]
+  }
+ ]
+}

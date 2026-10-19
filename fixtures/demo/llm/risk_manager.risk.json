@@ -1,0 +1,8 @@
+{
+ "narrative": "SCRIPTED FIXTURE. Coverage and leverage limits pass in the median-assumption case, but the pooled distribution places substantial weight on equity being impaired: the equity is a levered call on utilization and pricing. Cohort economics are positive but thin relative to the cost of capital.",
+ "additional_risks": [
+  "Single-customer concentration (60% of revenue) is not modelled as a discrete event.",
+  "Contract cancellability is unknown; take-or-pay terms would change the bear case materially.",
+  "Maturities beyond 36 months are not in the dossier, so refinancing risk is understated."
+ ]
+}

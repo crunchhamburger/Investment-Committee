@@ -1,0 +1,281 @@
+{
+ "thesis": "Reported earnings overstate the economics: maintenance capex on a six-year accounting life with a shorter economic life leaves little free cash flow for equity after debt service. No margin of safety at $45.",
+ "stance": "negative",
+ "key_points": [
+  "Debt of $20bn plus $15bn of leases sits ahead of equity.",
+  "Depreciation life was extended from four to six years in 2024.",
+  "Management's >90% utilization figure is a company statement, not an audited fact."
+ ],
+ "claims": [
+  {
+   "id": "c1",
+   "text": "Total debt was $20.0bn at June 30, 2026.",
+   "epistemic": "verified_fact",
+   "citations": [
+    "EV-001"
+   ],
+   "metric": "total_debt",
+   "value": 20.0,
+   "unit": "USD_bn",
+   "period": "2026-06-30"
+  },
+  {
+   "id": "c2",
+   "text": "Fleet utilization is 92%.",
+   "epistemic": "verified_fact",
+   "citations": [
+    "EV-003"
+   ],
+   "metric": "fleet_utilization",
+   "value": 0.92,
+   "unit": "fraction",
+   "period": "2026-09"
+  },
+  {
+   "id": "c3",
+   "text": "GPU servers are depreciated over six years.",
+   "epistemic": "verified_fact",
+   "citations": [
+    "EV-009"
+   ],
+   "metric": "gpu_depreciation_life",
+   "value": 6,
+   "unit": "years",
+   "period": "FY2025"
+  },
+  {
+   "id": "c4",
+   "text": "If economic life is shorter than the accounting life, reported EBIT overstates sustainable earnings.",
+   "epistemic": "analyst_assumption",
+   "citations": [],
+   "metric": null,
+   "value": null,
+   "unit": null,
+   "period": null
+  }
+ ],
+ "scenarios": [
+  {
+   "name": "base",
+   "probability": 0.5,
+   "assumptions": [
+    {
+     "driver": "mw_additions_per_year",
+     "value": 400,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Pace of new contracted capacity."
+    },
+    {
+     "driver": "energization_rate",
+     "value": 0.35,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Share of the contracted-but-dark backlog brought online each year."
+    },
+    {
+     "driver": "pue",
+     "value": 1.3,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Modern liquid-cooled halls; 1.3 is a typical design PUE."
+    },
+    {
+     "driver": "kw_per_gpu",
+     "value": 1.4,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "All-in IT load per GPU for current-generation racks including networking."
+    },
+    {
+     "driver": "existing_fleet_avg_age",
+     "value": 1,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Fleet was largely deployed over the last two years."
+    },
+    {
+     "driver": "utilization",
+     "value": 0.83,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [
+      "c2"
+     ],
+     "rationale": "Haircut to management's >90% claim, which is unaudited."
+    },
+    {
+     "driver": "price_per_gpu_hour_new",
+     "value": 2.95,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Blended price per GPU-hour for newest generation."
+    },
+    {
+     "driver": "price_new_growth_per_year",
+     "value": 0.0,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Newest-generation pricing assumed flat in nominal terms."
+    },
+    {
+     "driver": "price_decay_per_year_of_age",
+     "value": 0.13,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Discount per year of hardware age as new generations arrive."
+    },
+    {
+     "driver": "power_cost_per_mwh",
+     "value": 65,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Blended industrial power contracts in the company's regions."
+    },
+    {
+     "driver": "lease_cost_per_mw_year",
+     "value": 1200000.0,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Colocation lease cost per energised MW."
+    },
+    {
+     "driver": "other_opex_pct_revenue",
+     "value": 0.12,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Staffing, network, SG&A as share of revenue."
+    },
+    {
+     "driver": "capex_per_gpu",
+     "value": 40000,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "All-in server, networking and installation cost per GPU."
+    },
+    {
+     "driver": "gpu_useful_life_years",
+     "value": 6,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Company's stated accounting life."
+    },
+    {
+     "driver": "gpu_economic_life_years",
+     "value": 6,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Expected service life before replacement."
+    },
+    {
+     "driver": "existing_ppe_remaining_life",
+     "value": 5,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Remaining depreciation life of the installed base."
+    },
+    {
+     "driver": "tax_rate",
+     "value": 0.21,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Statutory rate; NOLs ignored for simplicity."
+    },
+    {
+     "driver": "nwc_pct_revenue_change",
+     "value": 0.05,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Customer prepayments partly offset receivables."
+    },
+    {
+     "driver": "wacc",
+     "value": 0.11,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Levered equity with refinancing needs warrants a higher discount rate."
+    },
+    {
+     "driver": "terminal_growth",
+     "value": 0.02,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Long-run nominal growth after the build-out phase."
+    },
+    {
+     "driver": "debt_funded_share_of_capex",
+     "value": 0.7,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Historical financing mix of asset-backed and unsecured debt."
+    },
+    {
+     "driver": "new_debt_rate",
+     "value": 0.085,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Recent issuance levels for comparable high-yield infrastructure credits."
+    }
+   ]
+  },
+  {
+   "name": "bear",
+   "probability": 0.3,
+   "assumptions": [
+    {
+     "driver": "utilization",
+     "value": 0.72,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Overbuild in 2027-28 pushes utilization down."
+    },
+    {
+     "driver": "price_per_gpu_hour_new",
+     "value": 2.6,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Contract repricing toward on-demand levels."
+    },
+    {
+     "driver": "price_decay_per_year_of_age",
+     "value": 0.18,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Faster obsolescence as new generations ship annually."
+    }
+   ]
+  },
+  {
+   "name": "bull",
+   "probability": 0.2,
+   "assumptions": [
+    {
+     "driver": "utilization",
+     "value": 0.88,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Long-term contracts keep the fleet full."
+    },
+    {
+     "driver": "price_per_gpu_hour_new",
+     "value": 3.2,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Scarcity pricing persists for newest generation."
+    }
+   ]
+  }
+ ],
+ "uncertainties": [
+  "Economic life of current-generation GPUs is unobserved.",
+  "Customer contract terms (take-or-pay vs cancellable) are not disclosed in the dossier."
+ ],
+ "invalidation_triggers": [
+  {
+   "description": "Audited utilization stays above 90% through 2027",
+   "metric": "fleet_utilization",
+   "operator": ">",
+   "threshold": 0.9,
+   "unit": "fraction"
+  }
+ ]
+}

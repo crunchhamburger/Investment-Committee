@@ -1,0 +1,269 @@
+{
+ "thesis": "The market treats the 2.5 GW contracted figure as revenue in waiting. Only 40% of RPO converts within 24 months and one customer is 60% of revenue; the real constraint is energisation pace, not demand.",
+ "stance": "negative",
+ "key_points": [
+  "60% revenue concentration in one customer.",
+  "40% of RPO recognised within 24 months.",
+  "2024 depreciation-life change flattered earnings by $1.1bn.",
+  "A blog claim of 100% industry utilization is unsupported and flagged."
+ ],
+ "claims": [
+  {
+   "id": "c1",
+   "text": "One customer accounted for 60% of quarterly revenue.",
+   "epistemic": "verified_fact",
+   "citations": [
+    "EV-001"
+   ],
+   "metric": "largest_customer_revenue_share",
+   "value": 60,
+   "unit": "pct",
+   "period": "Q2-2026"
+  },
+  {
+   "id": "c2",
+   "text": "The 2024 useful-life extension reduced depreciation by $1.1bn.",
+   "epistemic": "verified_fact",
+   "citations": [
+    "EV-009"
+   ],
+   "metric": "depreciation_life_change_benefit",
+   "value": 1.1,
+   "unit": "USD_bn",
+   "period": "FY2024"
+  },
+  {
+   "id": "c3",
+   "text": "About 40% of RPO is expected to be recognised within 24 months.",
+   "epistemic": "verified_fact",
+   "citations": [
+    "EV-001"
+   ],
+   "metric": "rpo_recognized_24m_share",
+   "value": 40,
+   "unit": "pct",
+   "period": "2026-06-30"
+  },
+  {
+   "id": "c4",
+   "text": "Some commentary claims industry utilization is at 100%.",
+   "epistemic": "speculation",
+   "citations": [
+    "EV-010"
+   ],
+   "metric": null,
+   "value": null,
+   "unit": null,
+   "period": null
+  }
+ ],
+ "scenarios": [
+  {
+   "name": "base",
+   "probability": 0.45,
+   "assumptions": [
+    {
+     "driver": "mw_additions_per_year",
+     "value": 450,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Pace of new contracted capacity."
+    },
+    {
+     "driver": "energization_rate",
+     "value": 0.28,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [
+      "c3"
+     ],
+     "rationale": "Slow RPO conversion (40% in 24 months) implies energisation well below backlog pace."
+    },
+    {
+     "driver": "pue",
+     "value": 1.3,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Modern liquid-cooled halls; 1.3 is a typical design PUE."
+    },
+    {
+     "driver": "kw_per_gpu",
+     "value": 1.4,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "All-in IT load per GPU for current-generation racks including networking."
+    },
+    {
+     "driver": "existing_fleet_avg_age",
+     "value": 1,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Fleet was largely deployed over the last two years."
+    },
+    {
+     "driver": "utilization",
+     "value": 0.8,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Share of GPU-hours sold across the fleet."
+    },
+    {
+     "driver": "price_per_gpu_hour_new",
+     "value": 3.0,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Blended price per GPU-hour for newest generation."
+    },
+    {
+     "driver": "price_new_growth_per_year",
+     "value": 0.0,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Newest-generation pricing assumed flat in nominal terms."
+    },
+    {
+     "driver": "price_decay_per_year_of_age",
+     "value": 0.13,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Discount per year of hardware age as new generations arrive."
+    },
+    {
+     "driver": "power_cost_per_mwh",
+     "value": 65,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Blended industrial power contracts in the company's regions."
+    },
+    {
+     "driver": "lease_cost_per_mw_year",
+     "value": 1200000.0,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Colocation lease cost per energised MW."
+    },
+    {
+     "driver": "other_opex_pct_revenue",
+     "value": 0.12,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Staffing, network, SG&A as share of revenue."
+    },
+    {
+     "driver": "capex_per_gpu",
+     "value": 40000,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "All-in server, networking and installation cost per GPU."
+    },
+    {
+     "driver": "gpu_useful_life_years",
+     "value": 6,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Company's stated accounting life."
+    },
+    {
+     "driver": "gpu_economic_life_years",
+     "value": 6,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Expected service life before replacement."
+    },
+    {
+     "driver": "existing_ppe_remaining_life",
+     "value": 5,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Remaining depreciation life of the installed base."
+    },
+    {
+     "driver": "tax_rate",
+     "value": 0.21,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Statutory rate; NOLs ignored for simplicity."
+    },
+    {
+     "driver": "nwc_pct_revenue_change",
+     "value": 0.05,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Customer prepayments partly offset receivables."
+    },
+    {
+     "driver": "wacc",
+     "value": 0.105,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "High-beta, highly levered equity; cost of capital set conservatively."
+    },
+    {
+     "driver": "terminal_growth",
+     "value": 0.025,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Long-run nominal growth after the build-out phase."
+    },
+    {
+     "driver": "debt_funded_share_of_capex",
+     "value": 0.7,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Historical financing mix of asset-backed and unsecured debt."
+    },
+    {
+     "driver": "new_debt_rate",
+     "value": 0.085,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Recent issuance levels for comparable high-yield infrastructure credits."
+    }
+   ]
+  },
+  {
+   "name": "bear",
+   "probability": 0.35,
+   "assumptions": [
+    {
+     "driver": "energization_rate",
+     "value": 0.2,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Transformer lead times extend further."
+    },
+    {
+     "driver": "utilization",
+     "value": 0.7,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Largest customer shifts load in-house."
+    }
+   ]
+  },
+  {
+   "name": "bull",
+   "probability": 0.2,
+   "assumptions": [
+    {
+     "driver": "utilization",
+     "value": 0.86,
+     "epistemic": "analyst_assumption",
+     "basis_claims": [],
+     "rationale": "Customer diversification succeeds."
+    }
+   ]
+  }
+ ],
+ "uncertainties": [
+  "Whether the largest customer's contracts are take-or-pay."
+ ],
+ "invalidation_triggers": [
+  {
+   "description": "Largest customer share falls below 40% of revenue",
+   "metric": "largest_customer_revenue_share",
+   "operator": "<",
+   "threshold": 0.4,
+   "unit": "fraction"
+  }
+ ]
+}

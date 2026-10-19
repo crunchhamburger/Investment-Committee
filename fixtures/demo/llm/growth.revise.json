@@ -1,0 +1,52 @@
+{
+ "changes": [
+  {
+   "scenario": "base",
+   "driver": "price_decay_per_year_of_age",
+   "new_value": 0.15,
+   "reason": "Pricing survey shows 15-20% decline per year of age; contracted pricing justifies the low end.",
+   "basis_challenge_ids": [
+    "industry->growth:price_decay_per_year_of_age"
+   ],
+   "basis_evidence_ids": [
+    "EV-005"
+   ]
+  },
+  {
+   "scenario": "bull",
+   "driver": "energization_rate",
+   "new_value": 0.5,
+   "reason": "Restated without the backlog figure: management cites 6-12 month delivery lags, so half the dark backlog per year is achievable in a strong case.",
+   "basis_evidence_ids": [
+    "EV-003"
+   ]
+  },
+  {
+   "scenario": "bear",
+   "driver": "utilization",
+   "new_value": 0.75,
+   "reason": "Contrarian's concentration point justifies a lower bear case.",
+   "basis_challenge_ids": [
+    "contrarian->growth:utilization"
+   ],
+   "basis_evidence_ids": [
+    "EV-001"
+   ]
+  }
+ ],
+ "retained_view_reason": "Base utilization and WACC retained: arguments did not change the evidence on current contracts.",
+ "new_claims": [
+  {
+   "id": "r1",
+   "text": "Active power was 900 MW at quarter end (corrected release).",
+   "epistemic": "verified_fact",
+   "citations": [
+    "EV-013"
+   ],
+   "metric": "active_power_mw",
+   "value": 900,
+   "unit": "MW",
+   "period": "2026-06-30"
+  }
+ ]
+}

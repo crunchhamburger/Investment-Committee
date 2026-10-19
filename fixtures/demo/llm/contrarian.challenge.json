@@ -1,0 +1,14 @@
+{
+ "challenges": [
+  {
+   "target_role": "growth",
+   "driver": "utilization",
+   "question": "60% of revenue comes from one customer that is building 1 GW of its own capacity. Why is 88% utilization durable through 2028?",
+   "counter_value": 0.8,
+   "evidence_ids": [
+    "EV-001",
+    "EV-006"
+   ]
+  }
+ ]
+}

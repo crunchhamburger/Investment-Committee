@@ -1,0 +1,10 @@
+{
+ "changes": [
+  {
+   "scenario": "base",
+   "driver": "utilization",
+   "new_value": 0.86,
+   "reason": "The debate suggests demand is stronger than I assumed."
+  }
+ ]
+}

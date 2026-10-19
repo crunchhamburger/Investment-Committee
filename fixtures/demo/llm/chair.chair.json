@@ -1,0 +1,40 @@
+{
+ "primary_thesis": "SCRIPTED FIXTURE. Value depends on GPU-hour pricing holding up as the fleet ages; the pricing survey (EV-005) and the 2024 useful-life extension (EV-009) suggest reported earnings overstate sustainable cash generation.",
+ "strongest_opposing_thesis": "Contracted power of 2.5 GW against 0.9 GW energised (EV-013) and management's $3.00 contracted pricing (EV-003) could support rapid growth if energisation accelerates.",
+ "catalysts": [
+  "Q3 energised MW versus the 1.6 GW dark backlog",
+  "Repricing of the next large contract renewal",
+  "Refinancing of the $4.0bn year-2 maturity (EV-001)"
+ ],
+ "key_risks": [
+  "The majority of analysts agree pricing decay is underappreciated.",
+  "60% customer concentration (EV-001)."
+ ],
+ "unresolved_questions": [
+  "What share of revenue is on take-or-pay contracts?",
+  "Economic life of current GPUs?"
+ ],
+ "reconsideration_triggers": [
+  {
+   "description": "Energised MW exceeds 1,400 by mid-2027",
+   "metric": "active_power_mw",
+   "operator": ">",
+   "threshold": 1400,
+   "unit": "MW"
+  },
+  {
+   "description": "Prior-generation pricing stabilises above $2.50",
+   "metric": "gpu_hour_price_prior_gen",
+   "operator": ">",
+   "threshold": 2.5,
+   "unit": "USD_per_hour"
+  }
+ ],
+ "cited_evidence": [
+  "EV-005",
+  "EV-009",
+  "EV-013",
+  "EV-003",
+  "EV-001"
+ ]
+}

@@ -1,0 +1,5 @@
+__pycache__/
+.cache/
+committee_output/
+.env
+*.pyc

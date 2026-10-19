@@ -1,0 +1,13 @@
+{
+ "challenges": [
+  {
+   "target_role": "growth",
+   "driver": "wacc",
+   "question": "New unsecured notes priced at 9.25% with a 4.3% 10-year Treasury. How is 10.5% a cost of capital for the equity-heavy marginal dollar?",
+   "evidence_ids": [
+    "EV-008",
+    "EV-014"
+   ]
+  }
+ ]
+}

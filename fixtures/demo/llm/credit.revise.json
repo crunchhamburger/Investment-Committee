@@ -1,0 +1,13 @@
+{
+ "changes": [
+  {
+   "scenario": "base",
+   "driver": "wacc",
+   "new_value": 0.108,
+   "reason": "On reflection the growth analyst's point about backlog has some merit.",
+   "basis_challenge_ids": [
+    "growth->credit:wacc"
+   ]
+  }
+ ]
+}
